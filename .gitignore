@@ -1,0 +1,14 @@
+# Ambientes virtuais
+.venv/
+.venv-*/
+venv/
+
+# Arquivos Python temporários
+__pycache__/
+*.py[cod]
+
+# Configurações e segredos locais
+.env
+
+# Configurações locais do editor
+.vscode/

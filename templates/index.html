@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Documentação acadêmica do servidor web Python com Flask.">
+  <title>Python + Flask | Documentação do Servidor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Python Flask, início">
+      <span class="brand-mark">Py</span>
+      <span><strong>PYTHON / FLASK</strong><small>UNIVALI · PROGRAMAÇÃO WEB</small></span>
+    </a>
+    <nav class="nav">
+      <a href="#tecnologia">Tecnologia</a>
+      <a href="#instalacao">Instalação</a>
+      <a href="#codigo">Código</a>
+      <a href="#conclusao">Conclusão</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> DOCUMENTAÇÃO TÉCNICA · SERVIDOR WEB</p>
+        <h1>Um servidor web,<br><span>do zero ao funcionamento.</span></h1>
+        <p class="hero-text">Uma introdução prática ao Python e ao Flask: da configuração do ambiente até a resposta de uma requisição HTTP.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#tecnologia">Explorar documentação <span>↘</span></a>
+          <a class="button button-secondary" href="#codigo">Ver o código</a>
+        </div>
+        <div class="hero-meta">
+          <span><b>01</b> Linguagem: Python</span>
+          <span><b>02</b> Framework: Flask</span>
+        </div>
+      </div>
+      <div class="code-window" aria-label="Exemplo de código Python">
+        <div class="window-bar">
+          <div class="window-dots"><i></i><i></i><i></i></div><span>app.py</span><span class="window-tag">PYTHON</span>
+        </div>
+        <pre><code><span class="code-purple">from</span> flask <span class="code-purple">import</span> Flask
+
+app = Flask(__name__)
+
+<span class="code-yellow">@app.route</span>(<span class="code-green">"/"</span>)
+<span class="code-purple">def</span> <span class="code-blue">inicio</span>():
+    <span class="code-purple">return</span> <span class="code-green">"Servidor funcionando!"</span>
+
+<span class="code-purple">if</span> __name__ == <span class="code-green">"__main__"</span>:
+    app.run(debug=<span class="code-orange">True</span>)</code></pre>
+        <div class="terminal-line"><span>➜</span> python app.py <b>●</b></div>
+      </div>
+      <div class="hero-glow"></div>
+    </section>
+
+    <section class="team-strip">
+      <div><span class="strip-label">TRABALHO PROGRAMAÇAO WEB</span><strong>Universidade do Vale do Itajaí — UNIVALI</strong>
+      </div>
+      <div><span class="strip-label">INTEGRANTES</span><strong>Rômulo Cesar Koppe e Thiago Luiz Ransdorf</strong>
+      </div>
+    </section>
+
+    <section class="section" id="tecnologia">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / TECNOLOGIA</p>
+          <h2>Flask<br><span>Framewoek para criação do servidor web.</span></h2>
+        </div>
+        <p>Python é a linguagem; Flask é o framework web que ajuda a receber requisições e definir respostas para
+          diferentes endereços da aplicação.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01</span>
+          <div class="feature-icon">⌘</div>
+          <h3>Curva de aprendizado</h3>
+          <p>A sintaxe do Python tende a ser legível, facilitando a compreensão do código por quem está começando.</p>
+        </article>
+        <article class="feature-card"><span class="feature-number">02</span>
+          <div class="feature-icon">↗</div>
+          <h3>Flexibilidade</h3>
+          <p>O Flask permite começar com uma estrutura pequena e adicionar recursos conforme a aplicação cresce.</p>
+        </article>
+        <article class="feature-card"><span class="feature-number">03</span>
+          <div class="feature-icon">{ }</div>
+          <h3>Rotas simples</h3>
+          <p>É possível associar um endereço, como <code>/</code>, a uma função Python que gera uma resposta.</p>
+        </article>
+        <article class="feature-card"><span class="feature-number">04</span>
+          <div class="feature-icon">⚡</div>
+          <h3>Prototipagem rápida</h3>
+          <p>É uma opção prática para protótipos, aplicações pequenas, projetos acadêmicos e APIs.</p>
+        </article>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">◎</div>
+        <div>
+          <p class="eyebrow">CASO DE USO IDEAL</p>
+          <h3>Quando faz sentido usar Flask?</h3>
+          <p>Quando o projeto precisa de controle sobre sua estrutura e de um ponto de partida simples — por exemplo,
+            uma API para um aplicativo ou um painel web acadêmico.</p>
+        </div>
+      </div>
+      <p class="note"><strong>Diferencial:</strong> o Flask oferece uma base enxuta. Recursos como banco de dados,
+        autenticação e validação podem ser adicionados conforme a necessidade.</p>
+    </section>
+
+    <section class="section section-muted" id="instalacao">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / PRÉ-REQUISITOS E SETUP</p>
+          <h2>Como preparo, instalo e<br><span>executo?</span></h2>
+        </div>
+        <p>Para rodar o projeto localmente, precisamos da instalaçao do Python e o Flask instalado no ambiente do projeto.</p>
+      </div>
+      <div class="setup-layout">
+        <div class="checklist">
+          <div class="check-item"><span>✓</span>
+            <div><strong>Python 3</strong><small>Instalado e disponível no terminal.</small></div>
+          </div>
+          <div class="check-item"><span>✓</span>
+            <div><strong>Editor de código</strong><small>VS Code foi a ferramenta utilizada.</small></div>
+          </div>
+          <div class="check-item"><span>✓</span>
+            <div><strong>Ambiente virtual</strong><small>Isola as dependências deste projeto.</small></div>
+          </div>
+          <div class="check-item"><span>✓</span>
+            <div><strong>Flask</strong><small>Framework web instalado via pip.</small></div>
+          </div>
+        </div>
+        <div class="terminal-card">
+          <div class="terminal-header"><span>TERMINAL · WINDOWS</span><span>● ● ●</span></div>
+          <div class="command"><small>01 — Criar ambiente virtual</small><code>python -m venv venv</code></div>
+          <div class="command"><small>02 — Ativar no PowerShell</small><code>.\venv\Scripts\Activate.ps1</code></div>
+          <div class="command"><small>03 — Instalar Flask</small><code>pip install Flask</code></div>
+          <div class="command"><small>04 — Iniciar servidor</small><code>python app.py</code></div>
+          <div class="terminal-success">✓ Abra http://127.0.0.1:5000/ no navegador</div>
+        </div>
+      </div>
+      <p class="note">Se o comando <code>python</code> não funcionar no Windows, tentem <code>py</code>. Se a ativação
+        do ambiente virtual for bloqueada, usem o CMD e executem <code>venv\Scripts\activate.bat</code>.</p>
+    </section>
+
+    <section class="section" id="codigo">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">03 / O CÓDIGO DO SERVIDOR</p>
+          <h2>O que acontece<br><span>por trás da página?</span></h2>
+        </div>
+        <p>Este é o código do servidor que entrega a página de documentação. O HTML e o CSS ficam em arquivos separados
+          para facilitar a organização.</p>
+      </div>
+      <div class="source-card">
+        <div class="source-header">
+          <div><span class="file-icon">Py</span><strong>app.py</strong><small>Servidor Flask</small></div><span
+            class="source-pill">CÓDIGO-FONTE</span>
+        </div>
+        <pre><code><span class="code-purple">from</span> flask <span class="code-purple">import</span> Flask, render_template
+
+app = Flask(__name__)
+
+<span class="code-yellow">@app.route</span>(<span class="code-green">"/"</span>)
+<span class="code-purple">def</span> <span class="code-blue">inicio</span>():
+    <span class="code-purple">return</span> render_template(<span class="code-green">"index.html"</span>)
+
+<span class="code-purple">if</span> __name__ == <span class="code-green">"__main__"</span>:
+    app.run(debug=<span class="code-orange">True</span>)</code></pre>
+      </div>
+      <div class="explanation-grid">
+        <article><span class="explain-symbol">01</span>
+          <div>
+            <h3>Importação</h3>
+            <p><code>Flask</code> cria a aplicação; <code>render_template</code> carrega o HTML da pasta
+              <code>templates</code>.</p>
+          </div>
+        </article>
+        <article><span class="explain-symbol">02</span>
+          <div>
+            <h3>Rota principal</h3>
+            <p><code>@app.route("/")</code> associa o endereço principal à função <code>inicio()</code>.</p>
+          </div>
+        </article>
+        <article><span class="explain-symbol">03</span>
+          <div>
+            <h3>Resposta</h3>
+            <p><code>render_template("index.html")</code> gera a página HTML enviada ao navegador.</p>
+          </div>
+        </article>
+        <article><span class="explain-symbol">04</span>
+          <div>
+            <h3>Inicialização</h3>
+            <p><code>python app.py</code> inicia o servidor local para testar a aplicação.</p>
+          </div>
+        </article>
+      </div>
+      <div class="http-flow"><span class="flow-node">Navegador</span><span class="flow-arrow">→ requisição GET /
+          →</span><span class="flow-node flow-node-accent">Flask</span><span class="flow-arrow">→ resposta HTML
+          →</span><span class="flow-node">Página exibida</span></div>
+      <p class="note"><strong>Atenção:</strong> <code>debug=True</code> é para desenvolvimento local. Não deve ser usado
+        como configuração de um servidor de produção.</p>
+    </section>
+
+    <section class="section conclusion-section" id="conclusao">
+      <div class="conclusion-panel">
+        <div class="conclusion-copy">
+          <p class="eyebrow">04 / CONCLUSÃO</p>
+          <h2>Aprender fazendo.</h2>
+          <p>O uso do Python com Flask permite observar, na prática, como uma aplicação recebe uma requisição HTTP e
+            devolve uma resposta. A estrutura simples ajuda a estudar rotas, organização de arquivos e integração entre
+            Back-End e Front-End.</p>
+        </div>
+        <div class="conclusion-fields">
+          <div><span>01</span><strong>Principal dificuldade</strong>
+            <p>Durante a realização do trabalho, conseguimos entender um pouco melhor como funciona um servidor web utilizando Python e Flask. No começo, tivemos algumas dificuldades, principalmente na instalação e configuração do Python, na criação do ambiente virtual (venv) e na hora de colocar o servidor para funcionar.
+
+Depois que conseguimos executar o projeto, ficou mais fácil entender como o Python trabalha junto com o HTML e o CSS para mostrar o site no navegador. Foi interessante perceber que, com poucas linhas de código, já é possível criar um servidor funcional.</p>
+          </div>
+          <div><span>02</span><strong>Recomendação final</strong>
+            <p>No geral, achamos o Flask uma boa ferramenta, principalmente para quem está começando na programação web. Apesar das dificuldades no início, ele é relativamente simples de utilizar e não exige tantas configurações. Por isso, recomendamos o Python com Flask para quem quer aprender a desenvolver aplicações web e entender melhor como funciona um servidor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#inicio"><span class="brand-mark">Py</span><strong>PYTHON /
+        FLASK</strong></a><span>Feito para aprender. Organizado para explicar.</span><a href="#inicio">Voltar ao topo
+      ↑</a></footer>
+</body>
+
+</html>
